@@ -1,0 +1,124 @@
+:root {
+  --color-bg-light: #ffffff;
+  --color-bg-dark: #1e1e2f;
+  --color-text-light: #1f1f1f;
+  --color-text-dark: #f3f3f3;
+  --color-primary: #5f4b8b;
+  --color-accent: #2196f3;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: sticky;
+  z-index: 999;
+  padding: 12px 0;
+  backdrop-filter: blur(8px);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header.light {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+}
+
+.header.dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+
+.header.scrolled {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo animé */
+.animated-logo a {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-primary);
+  animation: bounceIn 0.8s ease-in-out;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.nav-links {
+  position: relative;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 4px 8px;
+}
+
+/* Barre lumineuse ultra animée */
+.nav-underline {
+  position: absolute;
+  bottom: -8px;
+  height: 6px;
+  background: linear-gradient(90deg, #5f4b8b, #2196f3);
+  box-shadow: 0 0 20px #5f4b8b, 0 0 40px #2196f3, 0 0 60px #2196f3;
+  border-radius: 8px;
+  width: 100px;
+  transform-origin: left center;
+  opacity: 0.8;
+  transform: scaleX(1);
+}
+
+
+/* Bouton de thème */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  color: inherit;
+}
+
+.theme-toggle:hover {
+  background: radial-gradient(circle, rgba(100, 100, 255, 0.2), transparent);
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 20px;
+    font-size: 0.85rem;
+  }
+
+  .logo a {
+    font-size: 1.2rem;
+  }
+}

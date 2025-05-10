@@ -1,0 +1,68 @@
+/* Page principale */
+.home {
+    padding: 40px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* INTRO / PRESENTATION */
+  .intro {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  
+  .intro-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    color: var(--color-primary);
+  }
+  
+  .intro-text {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 32px;
+    color: inherit;
+    line-height: 1.6;
+  }
+  
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+  
+  /* PROJETS */
+  .projects {
+    margin-top: 40px;
+  }
+  
+  .projects-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-align: center;
+    color: var(--color-primary);
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .intro-title {
+      font-size: 2rem;
+    }
+  
+    .intro-text {
+      font-size: 1rem;
+    }
+  
+    .projects-title {
+      font-size: 1.6rem;
+    }
+  }

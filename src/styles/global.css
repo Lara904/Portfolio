@@ -1,0 +1,93 @@
+/* -------------------------------
+   BASE - RESET + FONDATIONS
+---------------------------------- */
+@import "@fontsource/inter";
+@import "@fontsource/orbitron";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #86c3ee 30%, #d1b3f9 60%, #4a0373 100%);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+/* -------------------------------
+   VARIABLES DE THÈME (Clair)
+---------------------------------- */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1f1f1f;
+  --color-primary: #6238bd;
+  --color-accent: #6bb2ec;
+  --color-bg-light: #f8f9fa;
+  --color-bg-dark: #1e1e2f;
+  --color-text-dark: #f3f3f3;
+  --radius: 12px;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/*  Variables si thème sombre activé */
+body.dark {
+  --color-bg: var(--color-bg-dark);
+  --color-text: var(--color-text-dark);
+  --color-primary: #f4f3f757;
+  --color-accent: #1a237e;
+  background: linear-gradient(135deg, #082680 30%,#4a0373 60% , #2b1055 100%);
+}
+
+/* -------------------------------
+   TYPOGRAPHIE
+---------------------------------- */
+h1, h2, h3, h4, h5 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--color-primary);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p {
+  margin-bottom: 1em;
+}
+
+/* -------------------------------
+   LIENS & BOUTONS GLOBAUX
+---------------------------------- */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* -------------------------------
+    RÉACTIVITÉ & SELECTION
+---------------------------------- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #fff;
+}

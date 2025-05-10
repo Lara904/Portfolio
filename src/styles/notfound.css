@@ -1,0 +1,80 @@
+.notfound-wrapper {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    overflow: hidden;
+    animation: appear 0.6s ease-out;
+  }
+  
+  .notfound-emoji {
+    font-size: 6rem;
+    animation: shake 1s infinite alternate;
+  }
+  
+  .notfound-title {
+    font-size: 3rem;
+    margin: 20px 0;
+    color: #e74c3c;
+    animation: zoomIn 0.5s ease-in;
+  }
+  
+  .notfound-text {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #fff;
+  }
+
+  .notfound-link {
+    text-decoration: none;
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    transform: scale(1);
+  }
+  
+  .notfound-link:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+  }
+  
+  /* Décor spatial */
+  
+  body.dark .notfound-wrapper {
+    background: linear-gradient(160deg, #0c1445, #1b274c);
+    color: white;
+  }
+  
+  .stars {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: transparent url('https://svgshare.com/i/uLW.svg') repeat;
+    background-size: contain;
+    opacity: 0.15;
+    z-index: 0;
+    animation: starsMove 60s linear infinite;
+  }
+  
+  @keyframes starsMove {
+    from { background-position: 0 0; }
+    to { background-position: -1000px 1000px; }
+  }
+  
+  /* Animations */
+  
+  @keyframes shake {
+    0% { transform: rotate(-5deg); }
+    100% { transform: rotate(5deg); }
+  }
+  
+  @keyframes zoomIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  @keyframes appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }

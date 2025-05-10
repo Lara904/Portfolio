@@ -1,0 +1,73 @@
+.project-card {
+    display: block;
+    background-color: var(--color-accent);
+    border-radius: 12px;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* ombre + marquée */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  body.dark .project-card {
+    background-color: var(--color-accent);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .project-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff; /* titre blanc */
+  }
+  
+  .project-description {
+    font-size: 0.95rem;
+    color: inherit;
+    line-height: 1.5;
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-top: 10px;
+    color: #fff;
+  }
+  
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+  
+  .project-tech-badge {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #fff;
+    backdrop-filter: blur(4px);
+    transition: transform 0.2s ease;
+  }
+  
+  .project-tech-badge:hover {
+    transform: scale(1.05);
+  }
+
+  .project-card:hover .project-description {
+    opacity: 1;
+    max-height: 120px;
+  }

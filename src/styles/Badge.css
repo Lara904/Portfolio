@@ -1,0 +1,106 @@
+.badge-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.badge /*mettre contour blanc en mode light*/ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: var(--color-accent);
+  color: white;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.badge:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.badge-icon {
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+
+.badge-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.badge-info {
+  margin-top: 12px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #000000;
+  max-width: 180px;
+  text-align: center;
+  animation: zoomFade 0.4s ease;
+  background: linear-gradient(135deg, #86c3ee 30%, #d1b3f9 60%, #be74e9 100%);
+
+  /* Transition animée */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: scale(0.9);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Mode sombre */
+body.dark .badge-info {
+  background: linear-gradient(135deg, #082680 30%,#4a0373 60% , #2b1055 100%);
+  color: white;
+}
+
+/* Quand actif */
+.badge-wrapper .badge-info-active {
+  max-height: 300px; /* suffisamment large */
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (max-width: 600px) {
+  .badge {
+    width: 70px;
+    height: 70px;
+    padding: 8px;
+  }
+
+  .badge-icon {
+    font-size: 1.5rem;
+  }
+
+  .badge-label {
+    font-size: 0.7rem;
+  }
+
+  .badge-info {
+    font-size: 0.7rem;
+    max-width: 140px;
+    padding: 8px 10px;
+  }
+}
+
+/* animation d'apparition */
+@keyframes zoomFade {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
