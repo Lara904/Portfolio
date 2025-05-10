@@ -23,7 +23,7 @@ Le tout est conçu avec un design responsive, des animations CSS modernes, et de
 
 ## 📍 Lien en ligne
 
-🔗 [Voir le site en ligne](https://ton-lien-netlify.netlify.app)
+🔗 [Voir le site en ligne](https://devbylara.netlify.app)
 
 ## ⚙️ Installation locale
 
